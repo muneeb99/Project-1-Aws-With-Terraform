@@ -1,3 +1,4 @@
+
 // Instance Name Variable
 variable "WEB-SERVER" {
   description = "Name of My instance in EC2"
@@ -89,6 +90,7 @@ variable "PublicRTassociation" {
   type = string
   default = "Association"
 }
+
 // Routing table
 
 variable "RT-Table" {
@@ -104,3 +106,17 @@ variable "Security-group" {
   default = "vpc-sg"
   
 }
+
+
+variable "table_name" {
+  description = "Name of the table in dynamoDB"
+  type = string
+  default = "Employee-data"
+  
+}
+variable "dynamoDB-Bucket" {
+description = "Exported dynamodb data to s3"
+type = string
+default = "dynamod-s3"
+}
+
